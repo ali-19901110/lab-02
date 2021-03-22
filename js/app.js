@@ -25,12 +25,17 @@ Product.prototype.render =function(){
     // $('header').append(prosel);
 
 }
+// let t ='Reem';
+// $('select').append(`<option value="ali" selected="selected">${t}</option>`);
+
+// function test(){
+    
+// for(let i=0;i<10;i++){
+//     console.log(i);
+// }}
+// test();
 Product.prototype.renderSelect =function(){
-    var sel = $('<select>').appendTo('header');
-    $(arrOfObject).each(function() {
-     sel.append($("<option>").attr('value',this.keyword).text(this.text));
-    //  arrOfObject[0]['keyword']
-    });
+$('select').append(`<option value="ali" selected="selected">${this.keyword}</option>`);
 
 }
 
@@ -40,22 +45,23 @@ const ajaxSet ={
     method :'get',
     datatype :'json'
 }
-console.log("test if i use the ajax");
+// console.log("test if i use the ajax");
 $.ajax('data/page-1.json',ajaxSet).then(data=>{
-console.log('test got the data');
-console.log(data);
+// console.log('test got the data');
+// console.log(data);
 let proObj
+let checkArr=[];
 data.forEach(element => {
    proObj =new Product(element.image_url,element.title,element.description,element.keyword,element.horns) ;
    proObj.render(); 
-});
+//    console.log(element);
+//    checkArr.push()
    proObj.renderSelect();
+});
+//    proObj.renderSelect();
 
 });
 }
 // getJsonData();
 $('document').ready(getJsonData);
-// $('#photo-template').eq(2).remove();
-// $('img').find("#photo-template").slice(2).remove();
 
-// $("#photo-template:nth-child(3)").remove();
