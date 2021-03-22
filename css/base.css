@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+/* section {
+    
+    visibility: hidden;
+}
+
+section.render {
+    visibility: visible;
+    background-color: blueviolet;
+    color: #FFF;
+} */
+
+#photo-template{
+    display: none;
+}
