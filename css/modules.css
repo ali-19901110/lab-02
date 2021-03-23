@@ -1,9 +1,9 @@
 section {
-    margin: 10px;
+    margin: 20px;
     border: 1px solid #ccc;
     float: left;
     width: 20%;
-    height: auto;
+    height: 300px;
   }
   
   section:hover {
@@ -13,7 +13,7 @@ section {
   section img {
       clear: both;
     width: 100%;
-    height: 250px;
+    height: 150px;
   }
   section h2{
     clear: both;
